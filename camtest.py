@@ -1,0 +1,13 @@
+import cv2
+
+capture = cv2.VideoCapture(0)
+
+while True:
+    r, frame = capture.read()
+
+    cv2.imshow('frame', frame)
+    if cv2.waitKey(1) & 0xFF == ord(' '):
+        break
+
+capture.release()
+cv2.destroyAllWindows()
